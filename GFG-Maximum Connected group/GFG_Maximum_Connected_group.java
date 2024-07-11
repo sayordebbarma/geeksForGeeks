@@ -1,3 +1,6 @@
+class Solution {
+    public int MaxConnection(int grid[][]) {
+        // Your code here
     int n = grid.length;
     int maxArea = 0;
     Integer[][] visited = new Integer[n][n];
@@ -53,3 +56,5 @@ private int exploreComponent(int row, int col, int n, Integer[][] visited, int[]
     componentSize += exploreComponent(row, col - 1, n, visited, grid, colorId);
 
     return componentSize;
+    }
+}
